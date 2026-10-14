@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دینی کام کارکردگی صوبہ سندھ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #ecfdf5 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .urdu-title {
+            font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', serif;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            line-height: 1.8;
+        }
+        .urdu-heading {
+            font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', serif;
+            line-height: 1.6;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ecfdf5;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #0d5c3a, #059669);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #094229;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+        }
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .float-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+        .btn-shine:hover::after {
+            left: 100%;
+        }
+        table th {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-3 md:p-6 text-slate-800">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="relative overflow-hidden bg-gradient-to-l from-emerald-900 via-emerald-800 to-green-700 text-white rounded-3xl p-6 md:p-8 shadow-2xl mb-6 text-center border-b-4 border-amber-400">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-amber-400/10 rounded-full -mr-20 -mt-20"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-emerald-400/10 rounded-full -ml-16 -mb-16"></div>
+            <div class="relative z-10">
+                <div class="flex justify-center items-center gap-3 mb-3">
+                    <i class="fa-solid fa-mosque text-4xl md:text-5xl text-amber-400 float-icon"></i>
+                    <h1 class="text-2xl md:text-4xl font-black tracking-wide urdu-title text-white">دینی کام کارکردگی سافٹ ویئر</h1>
+                </div>
+                <div class="flex items-center justify-center gap-2 mt-3">
+                    <span class="h-px w-12 bg-amber-400/50"></span>
+                    <p class="text-sm md:text-lg text-emerald-100 font-medium urdu-heading">صوبہ سندھ (تمام ڈویژنز کا مربوط نظام)</p>
+                    <span class="h-px w-12 bg-amber-400/50"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- LOGIN CARD -->
+        <div id="loginCard" class="max-w-md mx-auto glass-card rounded-3xl shadow-2xl p-8 border border-emerald-100 mt-12 fade-in">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg pulse-glow">
+                    <i class="fa-solid fa-user-shield text-4xl text-white"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-emerald-900 urdu-heading">سسٹم میں لاگ ان کریں</h2>
+                <p class="text-xs text-slate-500 mt-2 urdu-heading">اپنا شناختی نام منتخب کریں اور پاس ورڈ درج کریں</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-semibold text-emerald-900 mb-2 urdu-heading">
+                        <i class="fa-solid fa-id-badge text-emerald-600 ml-1"></i> صارف کا نام:
+                    </label>
+                    <select id="loginId" class="w-full p-3.5 bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-medium text-slate-700 transition-all cursor-pointer">
+                        <option value="" disabled selected>-- منتخب کریں --</option>
+                        <option value="Soba Sindh">صوبہ سندھ (ایڈمن)</option>
+                        <option value="Hyderabad City">Hyderabad City</option>
+                        <option value="Hyderabad Division">Hyderabad Division</option>
+                        <option value="Banbhore Division">Banbhore Division</option>
+                        <option value="Mirpurkhas Division">Mirpurkhas Division</option>
+                        <option value="Nawabshah Division">Nawabshah Division</option>
+                        <option value="Sukkur Division">Sukkur Division</option>
+                        <option value="Larkana Division">Larkana Division</option>
+                        <option value="Jacoabad Division">Jacoabad Division</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-emerald-900 mb-2 urdu-heading">
+                        <i class="fa-solid fa-key text-emerald-600 ml-1"></i> پاس ورڈ:
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="loginPass" placeholder="پاس ورڈ لکھیں..." required
+                               class="w-full p-3.5 bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-mono tracking-widest text-center transition-all">
+                        <span class="absolute left-4 top-4 text-slate-400"><i class="fa-solid fa-lock"></i></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-shine w-full py-4 bg-gradient-to-l from-emerald-700 to-green-600 hover:from-emerald-800 hover:to-green-700 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 text-lg urdu-heading">
+                    <i class="fa-solid fa-right-to-bracket text-xl"></i>
+                    لاگ ان کریں
+                </button>
+            </form>
+        </div>
+
+        <!-- MAIN DASHBOARD -->
+        <div id="mainDashboard" class="hidden fade-in">
+            <div class="glass-card rounded-2xl shadow-lg p-5 mb-6 flex flex-col md:flex-row justify-between items-center gap-4 border-r-4 border-emerald-700">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center text-white font-bold shadow-md">
+                        <i class="fa-solid fa-circle-user text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-500 urdu-heading">لاگ ان آئی ڈی:</span>
+                        <h3 id="displayUserRole" class="font-bold text-slate-800 text-lg urdu-heading">صوبہ سندھ (ایڈمن)</h3>
+                    </div>
+                </div>
+                <button onclick="handleLogout()" class="px-5 py-2.5 bg-gradient-to-l from-rose-50 to-rose-100 hover:from-rose-100 hover:to-rose-200 text-rose-700 text-sm font-bold rounded-xl border border-rose-200 flex items-center gap-2 transition-all urdu-heading">
+                    <i class="fa-solid fa-power-off"></i>
+                    لاگ آؤٹ
+                </button>
+            </div>
+
+            <!-- DIVISION USER VIEW -->
+            <div id="divisionView" class="hidden space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- ENTRY OPTIONS -->
+                    <div class="glass-card rounded-3xl shadow-xl p-6 border border-emerald-100/50 hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 text-white flex items-center justify-center shadow-md"><i class="fa-solid fa-pen-to-square text-lg"></i></span>
+                            <h2 class="text-xl font-bold text-slate-800 urdu-heading">نیا اندراج کریں</h2>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 mb-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">سال:</label>
+                                <select id="entryYear" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg text-xs md:text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all">
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">مہینہ:</label>
+                                <select id="entryMonth" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg text-xs md:text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all">
+                                    <option value="جنوری">جنوری</option>
+                                    <option value="فروری">فروری</option>
+                                    <option value="مارچ">مارچ</option>
+                                    <option value="اپریل">اپریل</option>
+                                    <option value="مئی">مئی</option>
+                                    <option value="جون">جون</option>
+                                    <option value="جولائی" selected>جولائی</option>
+                                    <option value="اگست">اگست</option>
+                                    <option value="ستمبر">ستمبر</option>
+                                    <option value="اکتوبر">اکتوبر</option>
+                                    <option value="نومبر">نومبر</option>
+                                    <option value="دسمبر">دسمبر</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">ہفتہ:</label>
+                                <select id="entryWeek" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg text-xs md:text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all">
+                                    <option value="پہلا ہفتہ">پہلا ہفتہ</option>
+                                    <option value="دوسرا ہفتہ">دوسرا ہفتہ</option>
+                                    <option value="تیسرا ہفتہ">تیسرا ہفتہ</option>
+                                    <option value="چوتھا ہفتہ">چوتھا ہفتہ</option>
+                                    <option value="پانچواں ہفتہ">پانچواں ہفتہ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button onclick="toggleInnerForm()" class="btn-shine w-full py-3 bg-gradient-to-l from-emerald-700 to-green-600 hover:from-emerald-800 hover:to-green-700 text-white font-bold rounded-xl shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 urdu-heading">
+                            <i class="fa-solid fa-keyboard"></i>
+                            اندراج کیجیے
+                        </button>
+                    </div>
+
+                    <!-- VIEW OPTIONS -->
+                    <div class="glass-card rounded-3xl shadow-xl p-6 border border-amber-100/50 hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center shadow-md"><i class="fa-solid fa-chart-line text-lg"></i></span>
+                            <h2 class="text-xl font-bold text-slate-800 urdu-heading">کارکردگی دیکھیں</h2>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 mb-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">سال:</label>
+                                <select id="viewYear" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg text-xs md:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">مہینہ:</label>
+                                <select id="viewMonth" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg text-xs md:text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                    <option value="جنوری">جنوری</option>
+                                    <option value="فروری">فروری</option>
+                                    <option value="مارچ">مارچ</option>
+                                    <option value="اپریل">اپریل</option>
+                                    <option value="مئی">مئی</option>
+                                    <option value="جون">جون</option>
+                                    <option value="جولائی" selected>جولائی</option>
+                                    <option value="اگست">اگست</option>
+                                    <option value="ستمبر">ستمبر</option>
+                                    <option value="اکتوبر">اکتوبر</option>
+                                    <option value="نومبر">نومبر</option>
+                                    <option value="دسمبر">دسمبر</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">ہفتہ / مکمل مہینہ:</label>
+                                <select id="viewWeek" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg text-xs md:text-sm font-bold text-emerald-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                    <option value="mukammal_mahina">مکمل مہینہ (اوسط)</option>
+                                    <option value="پہلا ہفتہ">پہلا ہفتہ</option>
+                                    <option value="دوسرا ہفتہ">دوسرا ہفتہ</option>
+                                    <option value="تیسرا ہفتہ">تیسرا ہفتہ</option>
+                                    <option value="چوتھا ہفتہ">چوتھا ہفتہ</option>
+                                    <option value="پانچواں ہفتہ">پانچواں ہفتہ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="btnViewSelf" onclick="viewSelfKarkerdagi()" class="btn-shine w-full py-3 bg-gradient-to-l from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-bold rounded-xl shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 urdu-heading">
+                            <i class="fa-solid fa-eye"></i>
+                            کارکردگی دیکھیں
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ENTRY FORM SECTION -->
+                <div id="innerForm1" class="hidden bg-white rounded-3xl shadow-2xl p-6 border-2 border-emerald-500/30 transition-all duration-300 fade-in">
+                    <div class="flex justify-between items-center pb-4 mb-6 border-b-2 border-slate-100">
+                        <div>
+                            <span id="formTargetLabel" class="text-xs font-bold text-emerald-800 bg-emerald-50 px-4 py-1.5 rounded-full uppercase tracking-wider urdu-heading">نیا ریکارڈ</span>
+                            <h3 class="text-2xl font-black text-slate-800 mt-2 urdu-heading">کارکردگی کا تفصیلی اندراج فارم</h3>
+                        </div>
+                        <button onclick="closeInnerForm()" class="text-slate-400 hover:text-rose-500 text-3xl transition-colors"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </div>
+
+                    <form id="karkerdagiForm" onsubmit="handleSaveForm(event)">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>کل ذمہ داران</span>
+                                    <i class="fa-solid fa-users-gear text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">شعبے کے ذمہ داران:</label>
+                                        <input type="number" id="f0_shoba" min="0" placeholder="0" oninput="handleZimadaraanChange()" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold bg-amber-50/50 transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>مدرسۃ المدینہ بالغان/بالغات</span>
+                                    <i class="fa-solid fa-school text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">کل مدرسے:</label>
+                                        <input type="number" id="f1_madrase" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">شعبے کے ذمہ داران:</label>
+                                        <input type="number" id="f1_shoba" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">دیگر شرکاء:</label>
+                                        <input type="number" id="f1_deegar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>ہفتہ وار اجتماع</span>
+                                    <i class="fa-solid fa-users text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">شعبے کے ذمہ داران:</label>
+                                        <input type="number" id="f2_shoba" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">دیگر شرکاء:</label>
+                                        <input type="number" id="f2_deegar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">رات نیکیوں میں گزارنے والے:</label>
+                                        <input type="number" id="f2_rat_guzar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>ہفتہ وار مدنی مذاکرہ</span>
+                                    <i class="fa-solid fa-headset text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">شعبے کے ذمہ داران:</label>
+                                        <input type="number" id="f3_shoba" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">دیگر شرکاء:</label>
+                                        <input type="number" id="f3_deegar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>علاقائی دورہ</span>
+                                    <i class="fa-solid fa-route text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">کتنی بار:</label>
+                                        <input type="number" id="f4_kitni_bar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">شعبے کے ذمہ داران:</label>
+                                        <input type="number" id="f4_shoba" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">دیگر شرکاء:</label>
+                                        <input type="number" id="f4_deegar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex flex-col urdu-heading">
+                                    <span class="text-sm">دیگر زبان میں حلقہ /</span>
+                                    <span class="text-xs text-slate-500">ایک دن راہِ خدا میں</span>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">کتنی بار:</label>
+                                        <input type="number" id="f5_kitni_bar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">شعبے کے ذِمہ داران:</label>
+                                        <input type="number" id="f5_shoba" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">دیگر شرکاء:</label>
+                                        <input type="number" id="f5_deegar" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>ہفتہ وار رسالہ</span>
+                                    <i class="fa-solid fa-book-open text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">تعداد مطالعہ (پڑھا/سنا):</label>
+                                        <input type="number" id="f6_tadaad" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-3 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>نیک اعمال رسائل</span>
+                                    <i class="fa-solid fa-envelope-open-text text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">تقسیم:</label>
+                                        <input type="number" id="f7_taqseem" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">وصول:</label>
+                                        <input type="number" id="f7_wasool" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-br from-emerald-50/70 to-white p-5 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition-all">
+                                <h4 class="font-bold text-emerald-900 border-b-2 border-emerald-600 pb-2 mb-4 flex justify-between urdu-heading">
+                                    <span>قافلہ (3 دن شرکاء)</span>
+                                    <i class="fa-solid fa-caravan text-emerald-700"></i>
+                                </h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">3 دن (تعداد):</label>
+                                        <input type="number" id="f8_tadaad" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">3 دن شرکاء (شعبے کے ذمہ داران):</label>
+                                        <input type="number" id="f8_zimadar_3din" min="0" placeholder="0" oninput="validateLiveMax(this)" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">3 دن شرکاء (دیگر):</label>
+                                        <input type="number" id="f8_deegar_3din" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-slate-700 mb-1.5 urdu-heading">3 دن شرکاء (کل):</label>
+                                        <input type="number" id="f8_kul_3din" min="0" placeholder="0" class="w-full p-2.5 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-bold transition-all">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-8 pt-5 border-t-2 border-slate-100 flex justify-end gap-3">
+                            <button type="button" onclick="closeInnerForm()" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition-all urdu-heading">کنسل کریں</button>
+                            <button id="btnSaveForm" type="submit" class="btn-shine px-8 py-3 bg-gradient-to-l from-emerald-700 to-green-600 hover:from-emerald-800 hover:to-green-700 text-white font-bold rounded-xl shadow-lg flex items-center gap-2 transition-all urdu-heading">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span id="saveBtnText">محفوظ کریں</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ADMIN VIEW SECTION -->
+            <div id="adminView" class="hidden space-y-6">
+                <div class="glass-card rounded-3xl shadow-xl p-6 border-r-4 border-amber-500">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center text-lg shadow-md"><i class="fa-solid fa-sliders"></i></span>
+                        <h2 class="text-xl font-bold text-slate-800 urdu-heading">صوبائی فلٹر کارکردگی</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">سال منتخب کریں:</label>
+                            <select id="adminYear" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">مہینہ منتخب کریں:</label>
+                            <select id="adminMonth" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                <option value="جنوری">جنوری</option>
+                                <option value="فروری">فروری</option>
+                                <option value="مارچ">مارچ</option>
+                                <option value="اپریل">اپریل</option>
+                                <option value="مئی">مئی</option>
+                                <option value="جون">جون</option>
+                                <option value="جولائی" selected>جولائی</option>
+                                <option value="اگست">اگست</option>
+                                <option value="ستمبر">ستمبر</option>
+                                <option value="اکتوبر">اکتوبر</option>
+                                <option value="نومبر">نومبر</option>
+                                <option value="دسمبر">دسمبر</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">ہفتہ / مکمل مہینہ:</label>
+                            <select id="adminWeek" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg font-bold text-emerald-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                <option value="mukammal_mahina">مکمل مہینہ (اوسط)</option>
+                                <option value="پہلا ہفتہ">پہلا ہفتہ</option>
+                                <option value="دوسرا ہفتہ">دوسرا ہفتہ</option>
+                                <option value="تیسرا ہفتہ">تیسرا ہفتہ</option>
+                                <option value="چوتھا ہفتہ">چوتھا ہفتہ</option>
+                                <option value="پانچواں ہفتہ">پانچواں ہفتہ</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5 urdu-heading">ڈویژن منتخب کریں:</label>
+                            <select id="adminDivision" class="w-full p-2.5 bg-slate-50 border-2 border-slate-200 rounded-lg font-bold text-emerald-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all">
+                                <option value="all">تمام ڈویژنز (صوبائی مجموعہ)</option>
+                                <option value="Hyderabad City">Hyderabad City</option>
+                                <option value="Hyderabad Division">Hyderabad Division</option>
+                                <option value="Banbhore Division">Banbhore Division</option>
+                                <option value="Mirpurkhas Division">Mirpurkhas Division</option>
+                                <option value="Nawabshah Division">Nawabshah Division</option>
+                                <option value="Sukkur Division">Sukkur Division</option>
+                                <option value="Larkana Division">Larkana Division</option>
+                                <option value="Jacoabad Division">Jacoabad Division</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button id="btnViewAdmin" onclick="viewAdminKarkerdagi()" class="btn-shine w-full py-3.5 bg-gradient-to-l from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-bold rounded-xl shadow-md hover:shadow-xl flex items-center justify-center gap-2 text-lg transition-all urdu-heading">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        کارکردگی دیکھیں
+                    </button>
+                </div>
+            </div>
+
+            <!-- REPORT DISPLAY AREA -->
+            <div id="reportDisplayArea" class="hidden bg-white rounded-3xl shadow-2xl p-6 border border-slate-100 mt-6 transition-all duration-300 fade-in">
+                <div class="flex flex-col md:flex-row justify-between items-center pb-5 mb-6 border-b-2 border-slate-100 gap-4">
+                    <div>
+                        <h3 id="reportHeaderTitle" class="text-2xl font-black text-slate-800 flex items-center gap-2 urdu-heading">
+                            <i class="fa-solid fa-rectangle-list text-emerald-700"></i>
+                            رپورٹ کارکردگی کارڈ
+                        </h3>
+                        <p id="reportHeaderMeta" class="text-xs text-slate-500 mt-2 urdu-heading">سال: 2026 | مہینہ: جولائی | ہفتہ: پہلا ہفتہ</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-end">
+                        <button onclick="exportToExcel()" class="px-4 py-2.5 bg-gradient-to-l from-emerald-600 to-green-500 hover:from-emerald-700 hover:to-green-600 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 shadow-md hover:shadow-lg transition-all urdu-heading">
+                            <i class="fa-solid fa-file-excel text-sm"></i> ایکسل بنائیں
+                        </button>
+                        <button onclick="sendEmailData()" class="px-4 py-2.5 bg-gradient-to-l from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 shadow-md hover:shadow-lg transition-all urdu-heading">
+                            <i class="fa-solid fa-envelope text-sm"></i> ڈیٹا ای میل کریں
+                        </button>
+                        <button onclick="hideReportArea()" class="px-4 py-2.5 bg-gradient-to-l from-rose-50 to-rose-100 hover:from-rose-100 hover:to-rose-200 text-rose-600 text-xs font-bold rounded-xl transition-all urdu-heading">
+                            بند کریں
+                        </button>
+                    </div>
+                </div>
+
+                <div id="reportContent" class="overflow-x-auto"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL NOTIFICATION -->
+    <div id="customModal" class="fixed inset-0 bg-slate-950/50 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full mx-4 border border-slate-100 fade-in">
+            <div class="text-center">
+                <div id="modalIconContainer" class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5"></div>
+                <h3 id="modalTitle" class="text-2xl font-bold text-slate-800 mb-3 urdu-heading">ٹائٹل</h3>
+                <p id="modalMsg" class="text-sm text-slate-500 mb-6 urdu-heading">میسج باڈی...</p>
+                <button onclick="closeModal()" class="btn-shine w-full py-3.5 bg-gradient-to-l from-emerald-700 to-green-600 hover:from-emerald-800 hover:to-green-700 text-white font-bold rounded-xl transition-all urdu-heading">ٹھیک ہے</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyCL2HZPitrBD2_KUDDziLhVoKaRc1KcuwQmQDsyOuuI4RKbLWqYDBc1KsoLcJY1WiFOg/exec";
+
+        const divisionsList = [
+            "Hyderabad City",
+            "Hyderabad Division",
+            "Banbhore Division",
+            "Mirpurkhas Division",
+            "Nawabshah Division",
+            "Sukkur Division",
+            "Larkana Division",
+            "Jacoabad Division"
+        ];
+
+        const tableColumns = [
+            { key: "f1_madrase", label: "کل مدرسے", parent: "مدرسۃ المدینہ بالغان/بالغات" },
+            { key: "f1_shoba", label: "شعبے کے ذمہ داران", parent: "مدرسۃ المدینہ بالغان/بالغات" },
+            { key: "f1_deegar", label: "دیگر شرکاء", parent: "مدرسۃ المدینہ بالغان/بالغات" },
+
+            { key: "f2_shoba", label: "شعبے کے ذمہ داران", parent: "ہفتہ وار اجتماع" },
+            { key: "f2_deegar", label: "دیگر شرکاء", parent: "ہفتہ وار اجتماع" },
+            { key: "f2_rat_guzar", label: "رات نیکیوں میں گزارنے والے", parent: "ہفتہ وار اجتماع" },
+
+            { key: "f3_shoba", label: "شعبے کے ذمہ داران", parent: "ہفتہ وار مدنی مذاکرہ" },
+            { key: "f3_deegar", label: "دیگر شرکاء", parent: "ہفتہ وار مدنی مذاکرہ" },
+
+            { key: "f4_kitni_bar", label: "کتنی بار", parent: "علاقائی دورہ" },
+            { key: "f4_shoba", label: "شعبے کے ذمہ داران", parent: "علاقائی دورہ" },
+            { key: "f4_deegar", label: "دیگر شرکاء", parent: "علاقائی دورہ" },
+
+            { key: "f5_kitni_bar", label: "کتنی بار", parent: "دیگر زبان میں حلقہ / راہ خدا" },
+            { key: "f5_shoba", label: "شعبے کے ذمہ داران", parent: "دیگر زبان میں حلقہ / راہ خدا" },
+            { key: "f5_deegar", label: "دیگر شرکاء", parent: "دیگر زبان میں حلقہ / راہ خدا" },
+
+            { key: "f6_tadaad", label: "تعداد مطالعہ (پڑھا/سنا)", parent: "ہفتہ وار رسالہ" },
+
+            { key: "f7_taqseem", label: "تقسیم", parent: "نیک اعمال کے رسائل" },
+            { key: "f7_wasool", label: "وصول", parent: "نیک اعمال کے رسائل" },
+
+            { key: "f8_tadaad", label: "3 دن (تعداد)", parent: "قافلہ" },
+            { key: "f8_zimadar_3din", label: "3 دن شرکاء (شعبے کے ذمہ داران)", parent: "قافلہ" },
+            { key: "f8_deegar_3din", label: "3 دن شرکاء (دیگر)", parent: "قافلہ" },
+            { key: "f8_kul_3din", label: "3 دن شرکاء (کل)", parent: "قافلہ" }
+        ];
+
+        let loggedInUser = null;
+        let selectedYear = "";
+        let selectedMonth = "";
+        let selectedWeek = "";
+        let lastSelectedMeta = "";
+        let currentReportType = "";
+        let currentReportData = null;
+
+        function showNotification(title, message, isSuccess = true) {
+            const modal = document.getElementById("customModal");
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalMsg").innerText = message;
+            const iconContainer = document.getElementById("modalIconContainer");
+
+            if (isSuccess) {
+                iconContainer.className = "w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5 bg-gradient-to-br from-emerald-50 to-green-100 text-emerald-600 border-2 border-emerald-500";
+                iconContainer.innerHTML = '<i class="fa-solid fa-circle-check text-4xl"></i>';
+            } else {
+                iconContainer.className = "w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5 bg-gradient-to-br from-rose-50 to-red-100 text-rose-600 border-2 border-rose-500";
+                iconContainer.innerHTML = '<i class="fa-solid fa-circle-exclamation text-4xl"></i>';
+            }
+            modal.classList.remove("hidden");
+        }
+
+        function closeModal() {
+            document.getElementById("customModal").classList.add("hidden");
+        }
+
+        function getMaxZimadarLimit() {
+            return parseInt(document.getElementById("f0_shoba").value) || 0;
+        }
+
+        function validateLiveMax(element) {
+            const limit = getMaxZimadarLimit();
+            const currentVal = parseInt(element.value) || 0;
+            if (currentVal > limit) {
+                element.value = limit;
+                element.classList.add("border-rose-500", "ring-2", "ring-rose-400");
+                setTimeout(() => { element.classList.remove("border-rose-500", "ring-2", "ring-rose-400"); }, 800);
+            }
+        }
+
+        function handleZimadaraanChange() {
+            const limit = getMaxZimadarLimit();
+            const liveValidateIds = ["f1_shoba", "f2_shoba", "f3_shoba", "f4_shoba", "f5_shoba", "f6_tadaad", "f7_taqseem", "f8_zimadar_3din"];
+            liveValidateIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && (parseInt(el.value) || 0) > limit) { el.value = limit; }
+            });
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const id = document.getElementById("loginId").value;
+            const pass = document.getElementById("loginPass").value;
+
+            if (!id) {
+                showNotification("توجہ فرمائیں", "برائے مہربانی صارف کا نام منتخب کریں۔", false);
+                return;
+            }
+
+            if (id === "Soba Sindh" && pass !== "87654321") {
+                showNotification("لاگ ان ناکام", "ایڈمن کا درج شدہ پاس ورڈ درست نہیں ہے۔", false);
+                return;
+            } else if (id !== "Soba Sindh" && pass !== "12345678") {
+                showNotification("لاگ ان ناکام", "درج شدہ پاس ورڈ درست نہیں ہے۔", false);
+                return;
+            }
+
+            loggedInUser = id;
+            document.getElementById("loginCard").classList.add("hidden");
+            document.getElementById("mainDashboard").classList.remove("hidden");
+            document.getElementById("displayUserRole").innerText = id;
+
+            if (id === "Soba Sindh") {
+                document.getElementById("adminView").classList.remove("hidden");
+                document.getElementById("divisionView").classList.add("hidden");
+            } else {
+                document.getElementById("divisionView").classList.remove("hidden");
+                document.getElementById("adminView").classList.add("hidden");
+                document.getElementById("innerForm1").classList.add("hidden");
+                document.getElementById("reportDisplayArea").classList.add("hidden");
+            }
+        }
+
+        function handleLogout() {
+            loggedInUser = null;
+            document.getElementById("loginPass").value = "";
+            document.getElementById("loginId").value = "";
+            document.getElementById("mainDashboard").classList.add("hidden");
+            document.getElementById("loginCard").classList.remove("hidden");
+            hideReportArea();
+        }
+
+        async function toggleInnerForm() {
+            selectedYear = document.getElementById("entryYear").value;
+            selectedMonth = document.getElementById("entryMonth").value;
+            selectedWeek = document.getElementById("entryWeek").value;
+
+            document.getElementById("formTargetLabel").innerText = `${loggedInUser} - سال: ${selectedYear} | مہینہ: ${selectedMonth} | ہفتہ: ${selectedWeek}`;
+            
+            const inputs = document.querySelectorAll("#karkerdagiForm input");
+            inputs.forEach(input => input.value = "");
+
+            const innerForm = document.getElementById("innerForm1");
+            innerForm.classList.remove("hidden");
+            innerForm.scrollIntoView({ behavior: 'smooth' });
+
+            try {
+                const response = await fetch(`${GOOGLE_SHEET_URL}?year=${encodeURIComponent(selectedYear)}&month=${encodeURIComponent(selectedMonth)}&week=${encodeURIComponent(selectedWeek)}&division=${encodeURIComponent(loggedInUser)}`);
+                const result = await response.json();
+                if (result.status === "success" && result.data && result.data[loggedInUser]) {
+                    const existingRecord = result.data[loggedInUser];
+                    inputs.forEach(input => {
+                        if (existingRecord[input.id] !== undefined) {
+                            input.value = existingRecord[input.id];
+                        }
+                    });
+                }
+            } catch (err) {
+                console.log("No previous record loaded for editing.", err);
+            }
+        }
+
+        function closeInnerForm() {
+            document.getElementById("innerForm1").classList.add("hidden");
+        }
+
+        async function handleSaveForm(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById("btnSaveForm");
+            const btnText = document.getElementById("saveBtnText");
+            btn.disabled = true;
+            btnText.innerText = "محفوظ ہو رہا ہے...";
+
+            const record = {};
+            const inputs = document.querySelectorAll("#karkerdagiForm input");
+            inputs.forEach(input => {
+                record[input.id] = input.value !== "" ? parseInt(input.value) : 0;
+            });
+
+            try {
+                const response = await fetch(GOOGLE_SHEET_URL, {
+                    method: "POST",
+                    mode: "cors",
+                    headers: { "Content-Type": "text/plain;charset=utf-8" },
+                    body: JSON.stringify({
+                        action: "save",
+                        year: selectedYear,
+                        month: selectedMonth,
+                        week: selectedWeek,
+                        division: loggedInUser,
+                        record: record
+                    })
+                });
+
+                const result = await response.json();
+                if (result.status === "success") {
+                    showNotification("کامیابی", `${loggedInUser} کی (${selectedMonth} - ${selectedWeek}) کی کارکردگی کامیابی سے محفوظ ہو چکی ہے۔`);
+                    closeInnerForm();
+                } else {
+                    showNotification("غلطی", "ڈیٹا محفوظ کرنے میں مسئلہ آیا: " + result.message, false);
+                }
+            } catch (error) {
+                showNotification("نیٹ ورک غلطی", "گوگل سرور سے رابطہ نہیں ہو سکا۔ " + error.message, false);
+            } finally {
+                btn.disabled = false;
+                btnText.innerText = "محفوظ کریں";
+            }
+        }
+
+        async function viewSelfKarkerdagi() {
+            const yr = document.getElementById("viewYear").value;
+            const mo = document.getElementById("viewMonth").value;
+            const wk = document.getElementById("viewWeek").value;
+            const btn = document.getElementById("btnViewSelf");
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> لوڈ ہو رہا ہے...';
+
+            try {
+                const response = await fetch(`${GOOGLE_SHEET_URL}?year=${encodeURIComponent(yr)}&month=${encodeURIComponent(mo)}&week=${encodeURIComponent(wk)}&division=${encodeURIComponent(loggedInUser)}`);
+                const result = await response.json();
+
+                if (result.status === "success" && result.data && result.data[loggedInUser]) {
+                    const record = result.data[loggedInUser];
+                    currentReportType = "single";
+                    currentReportData = { divName: loggedInUser, year: yr, month: mo, week: wk, record: record };
+                    
+                    const weekLabel = (wk === "mukammal_mahina") ? "مکمل_مہینہ_اوسط" : wk;
+                    lastSelectedMeta = `${loggedInUser}_Karkerdagi_${mo}_${weekLabel}_${yr}`;
+                    renderSingleRowReport(loggedInUser, yr, mo, wk, record);
+                } else {
+                    showNotification("ریکارڈ نہیں ملا", "اس منتخب انتخاب کا ڈیٹا گوگل شیٹ میں درج نہیں ہے۔", false);
+                    hideReportArea();
+                }
+            } catch (error) {
+                showNotification("غلطی", "گوگل شیٹ سے ڈیٹا لوڈ کرنے میں مسئلہ آیا۔", false);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-eye"></i> کارکردگی دیکھیں';
+            }
+        }
+
+        async function viewAdminKarkerdagi() {
+            const yr = document.getElementById("adminYear").value;
+            const mo = document.getElementById("adminMonth").value;
+            const wk = document.getElementById("adminWeek").value;
+            const div = document.getElementById("adminDivision").value;
+            const btn = document.getElementById("btnViewAdmin");
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> لوڈ ہو رہا ہے...';
+
+            try {
+                const response = await fetch(`${GOOGLE_SHEET_URL}?year=${encodeURIComponent(yr)}&month=${encodeURIComponent(mo)}&week=${encodeURIComponent(wk)}&division=${encodeURIComponent(div)}`);
+                const result = await response.json();
+
+                if (result.status === "success" && result.data && Object.keys(result.data).length > 0) {
+                    const monthData = result.data;
+                    const weekLabel = (wk === "mukammal_mahina") ? "مکمل_مہینہ_اوسط" : wk;
+
+                    if (div !== "all") {
+                        const record = monthData[div];
+                        if (!record) {
+                            showNotification("ریکارڈ نہیں ملا", `منتخب ڈویژن (${div}) کا ریکارڈ موجود نہیں ہے۔`, false);
+                            hideReportArea();
+                            return;
+                        }
+                        currentReportType = "single";
+                        currentReportData = { divName: div, year: yr, month: mo, week: wk, record: record };
+                        lastSelectedMeta = `${div}_Karkerdagi_${mo}_${weekLabel}_${yr}`;
+                        renderSingleRowReport(div, yr, mo, wk, record);
+                    } else {
+                        const activeDivs = Object.keys(monthData).filter(d => divisionsList.includes(d));
+                        if (activeDivs.length === 0) {
+                            showNotification("کوئی ڈیٹا نہیں ملا", "صوبہ سندھ کی کسی بھی ڈویژن کا ریکارڈ دستیاب نہیں ہے۔", false);
+                            hideReportArea();
+                            return;
+                        }
+
+                        currentReportType = "multiple";
+                        currentReportData = { year: yr, month: mo, week: wk, monthData: monthData, divisions: activeDivs };
+                        lastSelectedMeta = `Soba_Sindh_Karkerdagi_${mo}_${weekLabel}_${yr}`;
+                        renderHorizontalGrid(yr, mo, wk, monthData);
+                    }
+                } else {
+                    showNotification("ریکارڈ نہیں ملا", "گوگل شیٹ پر تلاش کردہ ریکارڈ دستیاب نہیں ہے۔", false);
+                    hideReportArea();
+                }
+            } catch (error) {
+                showNotification("غلطی", "ڈیٹا حاصل کرنے میں مسئلہ آیا: " + error.message, false);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-magnifying-glass-chart"></i> کارکردگی دیکھیں';
+            }
+        }
+
+        function renderSingleRowReport(divName, yr, mo, wk, record) {
+            const reportArea = document.getElementById("reportDisplayArea");
+            const headerTitle = document.getElementById("reportHeaderTitle");
+            const headerMeta = document.getElementById("reportHeaderMeta");
+            const content = document.getElementById("reportContent");
+
+            const displayWeekText = (wk === "mukammal_mahina") ? "مکمل مہینہ (اوسط کارکردگی)" : wk;
+
+            headerTitle.innerHTML = `<i class="fa-solid fa-file-invoice text-emerald-700"></i> ڈویژنل کارکردگی رپورٹ: ${divName}`;
+            headerMeta.innerText = `رپورٹ برائے: ${mo} (${displayWeekText}) - ${yr}`;
+
+            const mockMonthData = {};
+            mockMonthData[divName] = record;
+
+            renderHorizontalLayout([divName], mockMonthData, content, wk, false);
+            reportArea.classList.remove("hidden");
+            reportArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderHorizontalGrid(yr, mo, wk, monthData) {
+            const reportArea = document.getElementById("reportDisplayArea");
+            const headerTitle = document.getElementById("reportHeaderTitle");
+            const headerMeta = document.getElementById("reportHeaderMeta");
+            const content = document.getElementById("reportContent");
+
+            const displayWeekText = (wk === "mukammal_mahina") ? "مکمل مہینہ (اوسط کارکردگی)" : wk;
+
+            headerTitle.innerHTML = `<i class="fa-solid fa-globe text-emerald-700"></i> صوبائی تقابلی و مجموعی رپورٹ (سندھ)`;
+            headerMeta.innerText = `تمام ڈویژنز کا تقابلی و مجموعی نقشہ برائے: ${mo} (${displayWeekText}) - ${yr}`;
+
+            renderHorizontalLayout(divisionsList, monthData, content, wk, true);
+            reportArea.classList.remove("hidden");
+            reportArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderHorizontalLayout(divs, monthData, container, wk, showTotals = false) {
+            const parentGroups = {};
+            tableColumns.forEach(col => {
+                parentGroups[col.parent] = (parentGroups[col.parent] || 0) + 1;
+            });
+
+            let html = `
+                <table id="excelTable" dir="rtl" class="w-full text-xs text-center border-collapse border border-slate-400 min-w-[1200px]" style="border: 2px solid #1e293b;">
+                    <thead>
+                        <tr class="bg-gradient-to-l from-sky-100 to-sky-50 text-slate-800 font-bold border-b-2 border-slate-400">
+                            <th rowspan="2" class="p-3 border border-slate-400 align-middle bg-gradient-to-br from-sky-200 to-sky-100 text-sm font-black text-center min-w-[120px] urdu-heading">ڈویژن</th>
+                            <th rowspan="2" class="p-3 border border-slate-400 align-middle bg-gradient-to-br from-sky-200 to-sky-100 text-sm font-black text-center urdu-heading">کل ذمہ داران</th>
+            `;
+
+            const uniqueParents = [...new Set(tableColumns.map(c => c.parent))];
+            uniqueParents.forEach(p => {
+                const span = parentGroups[p];
+                html += `<th colspan="${span}" class="p-2.5 border border-slate-400 text-center text-sm font-black bg-gradient-to-b from-sky-100 to-sky-50 urdu-heading">${p}</th>`;
+            });
+
+            html += `</tr>`;
+
+            html += `<tr class="bg-slate-50 text-slate-700 font-bold border-b-2 border-slate-400">`;
+            tableColumns.forEach(col => {
+                html += `<th class="p-2.5 border border-slate-400 text-center font-semibold max-w-[120px] break-words urdu-heading">${col.label}</th>`;
+            });
+            html += `</tr></thead><tbody>`;
+
+            divs.forEach(div => {
+                const rec = monthData[div] || {};
+                html += `<tr class="hover:bg-amber-50/30 text-slate-800 font-medium border-b border-slate-300 transition-colors">`;
+                html += `<td class="p-3 border border-slate-300 font-bold text-center bg-gradient-to-br from-sky-50 to-white urdu-heading">${div}</td>`;
+                
+                const zimadarValue = rec["f0_shoba"] !== undefined ? rec["f0_shoba"] : 0;
+                html += `<td class="p-3 border border-slate-300 font-bold text-center">${zimadarValue}</td>`;
+
+                tableColumns.forEach(col => {
+                    let value = rec[col.key] !== undefined ? rec[col.key] : 0;
+                    html += `<td class="p-2.5 border border-slate-300 text-center font-bold">${value}</td>`;
+                });
+                html += `</tr>`;
+            });
+
+            if (showTotals) {
+                html += `<tr class="bg-gradient-to-l from-sky-100 to-sky-50 font-black text-slate-950 border-t-2 border-slate-400">`;
+                html += `<td class="p-3 border border-slate-400 text-center text-sm urdu-heading">مجموعی کارکردگی</td>`;
+
+                let zimadarSum = 0;
+                divs.forEach(div => {
+                    zimadarSum += parseInt(monthData[div]?.["f0_shoba"]) || 0;
+                });
+                html += `<td class="p-3 border border-slate-400 text-center text-sm">${zimadarSum}</td>`;
+
+                tableColumns.forEach(col => {
+                    let sum = 0;
+                    divs.forEach(div => {
+                        sum += parseInt(monthData[div]?.[col.key]) || 0;
+                    });
+                    html += `<td class="p-2.5 border border-slate-400 text-center text-sm font-black">${sum}</td>`;
+                });
+                html += `</tr>`;
+            }
+
+            html += `</tbody></table>`;
+            container.innerHTML = html;
+        }
+
+        function exportToExcel() {
+            const table = document.getElementById("excelTable");
+            if (!table) {
+                showNotification("فائل بنانے میں غلطی", "ڈیٹا دستیاب نہیں ہے۔", false);
+                return;
+            }
+
+            const html = table.outerHTML;
+            const filename = `${lastSelectedMeta}.xls`;
+
+            const excelTemplate = `
+                <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+                <head>
+                    <meta charset="UTF-8">
+                    <style>
+                        table { border-collapse: collapse; width: 100%; direction: rtl; }
+                        th, td { border: 1px solid #999999; padding: 6px; text-align: center; font-family: 'Segoe UI', Tahoma, Arial; }
+                        th { background-color: #e0f2fe; color: #000000; font-weight: bold; }
+                    </style>
+                </head>
+                <body>
+                    ${html}
+                </body>
+                </html>
+            `;
+
+            const blob = new Blob([excelTemplate], { type: "application/vnd.ms-excel" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function sendEmailData() {
+            if (!currentReportData) {
+                showNotification("رپورٹ خالی ہے", "کوئی ریکارڈ لوڈ نہیں کیا گیا۔ پہلے کارکردگی تلاش کریں۔", false);
+                return;
+            }
+
+            let emailBody = "السلام علیکم ورحمۃ اللہ وبرکاتہ،\n\nدینی کام کارکردگی رپورٹ برائے صوبہ سندھ درج ذیل ہے:\n\n";
+            emailBody += "===============================\n";
+
+            if (currentReportType === "single") {
+                const { divName, year, month, week, record } = currentReportData;
+                const weekStr = (week === "mukammal_mahina") ? "مکمل مہینہ (اوسط)" : week;
+                emailBody += `ڈویژن: ${divName}\n`;
+                emailBody += `مہینہ/ہفتہ/سال: ${month} (${weekStr}) ${year}\n`;
+                emailBody += "-------------------------------\n";
+                emailBody += `کل ذمہ داران: ${record["f0_shoba"] || 0}\n\n`;
+
+                let currentParent = "";
+                tableColumns.forEach(col => {
+                    if (col.parent !== currentParent) {
+                        currentParent = col.parent;
+                        emailBody += `\n🔸 [${currentParent}]\n`;
+                    }
+                    const val = record[col.key] !== undefined ? record[col.key] : 0;
+                    emailBody += `  - ${col.label}: ${val}\n`;
+                });
+
+            } else if (currentReportType === "multiple") {
+                const { year, month, week, monthData, divisions } = currentReportData;
+                const weekStr = (week === "mukammal_mahina") ? "مکمل مہینہ (اوسط)" : week;
+                emailBody += `مجموعی رپورٹ برائے: ${month} (${weekStr}) ${year}\n`;
+                emailBody += "===============================\n\n";
+
+                divisions.forEach(div => {
+                    const rec = monthData[div] || {};
+                    emailBody += `🔹 ڈویژن: ${div}\n`;
+                    emailBody += `کل ذمہ داران: ${rec["f0_shoba"] || 0}\n`;
+                    
+                    let currentParent = "";
+                    tableColumns.forEach(col => {
+                        if (col.parent !== currentParent) {
+                            currentParent = col.parent;
+                            emailBody += `  📎 ${currentParent}:\n`;
+                        }
+                        const val = rec[col.key] !== undefined ? rec[col.key] : 0;
+                        emailBody += `    • ${col.label}: ${val}\n`;
+                    });
+                    emailBody += "-------------------------------\n\n";
+                });
+            }
+
+            emailBody += "===============================\n";
+            emailBody += "یہ ای میل کارکردگی ٹریکر سافٹ ویئر سے خودکار طریقے سے تیار کی گئی ہے۔";
+
+            const recipient = "shahrukhaftab90@gmail.com";
+            const subject = encodeURIComponent(`دینی کام کارکردگی رپورٹ - ${lastSelectedMeta}`);
+            const body = encodeURIComponent(emailBody);
+
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+        }
+
+        function hideReportArea() {
+            document.getElementById("reportDisplayArea").classList.add("hidden");
+            currentReportData = null;
+        }
+    </script>
+</body>
+</html>
